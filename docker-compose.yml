@@ -1,9 +1,5 @@
 version: '3'
 
-networks:
-  ouroboros:
-    driver: bridge
-
 services:
   proxy:
     image: traefik
@@ -12,8 +8,6 @@ services:
       - '80:80'
       - '443:443'
       - '8080:8080'
-    networks:
-      - ouroboros
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
       - ./conf/traefik.toml:/etc/traefik/traefik.toml:ro
