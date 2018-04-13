@@ -16,3 +16,5 @@ services:
       - ouroboros
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
+      - ./conf/traefik.toml:/etc/traefik/traefik.toml:ro
+      - ./conf:/etc/traefik/conf
