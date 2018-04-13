@@ -160,4 +160,4 @@ defaultEntryPoints = ["http", "https"]
 # Optional
 # Default: true
 #
-# exposedByDefault = true
+exposedByDefault = false
