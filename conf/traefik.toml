@@ -39,11 +39,8 @@ defaultEntryPoints = ["http", "https"]
     address = ":443"
       [entryPoints.https.tls]
         [[entryPoints.https.tls.certificates]]
-        certFile = "/etc/traefik/conf/our.cert"
-        keyFile = "/etc/traefik/conf/our.key"
-        [[entryPoints.https.tls.certificates]]
-        certFile = "/etc/traefik/conf/ouro.cert"
-        keyFile = "/etc/traefik/conf/ouro.key"
+        certFile = "/etc/traefik/conf/loc.crt"
+        keyFile = "/etc/traefik/conf/loc.key"
 
 ################################################################
 # Traefik logs configuration
