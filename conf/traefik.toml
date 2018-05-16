@@ -39,8 +39,8 @@ defaultEntryPoints = ["http", "https"]
     address = ":443"
       [entryPoints.https.tls]
         [[entryPoints.https.tls.certificates]]
-        certFile = "/etc/traefik/conf/loc.crt"
-        keyFile = "/etc/traefik/conf/loc.key"
+        certFile = "/etc/traefik/conf/test.crt"
+        keyFile = "/etc/traefik/conf/test.key"
 
 ################################################################
 # Traefik logs configuration
@@ -150,7 +150,7 @@ defaultEntryPoints = ["http", "https"]
 # Optional
 # Default: ""
 #
-# domain = "docker.localhost"
+domain = "test"
 
 # Expose containers by default in traefik
 #
