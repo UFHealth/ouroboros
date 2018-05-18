@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+if [ $# -gt 0 ]; then
+    docker-compose -p Ouroboros "$@" # Specify Ouroboros as project name for predictable networking.
+else
+    docker-compose ps
+fi

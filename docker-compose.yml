@@ -1,0 +1,36 @@
+version: '3'
+
+networks:
+  default:
+    driver: bridge
+
+services:
+  mailcatcher:
+    image: schickling/mailcatcher
+    restart: always
+    depends_on:
+      - proxy
+    environment:
+      MAILCATCHER_PORT: 1025
+    networks:
+      - default
+    labels:
+      - 'traefik.frontend.rule=Host:mailcatcher.test'
+      - 'traefik.domain=mailcatcher.test'
+      - 'traefik.enable=true'
+      - 'traefik.docker.network=ouroboros_default'
+      - 'traefik.port=1080'
+      - "traefik.frontend.redirect.entryPoint=http"
+  proxy:
+    image: traefik
+    command: --api --docker
+    ports:
+      - '80:80'
+      - '443:443'
+      - '8080:8080'
+    networks:
+      - default
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./conf/traefik.toml:/etc/traefik/traefik.toml:ro
+      - ./conf:/etc/traefik/conf
