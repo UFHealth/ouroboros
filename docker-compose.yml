@@ -21,6 +21,17 @@ services:
       - 'traefik.docker.network=ouroboros_default'
       - 'traefik.port=1080'
       - "traefik.frontend.redirect.entryPoint=http"
+  webgrind:
+    image: devgeniem/webgrind
+    ports:
+      - 80
+    labels:
+      - 'traefik.frontend.rule=Host:webgrind.test'
+      - 'traefik.domain=webgrind.test'
+      - 'traefik.enable=true'
+      - 'traefik.docker.network=ouroboros_default'
+      - 'traefik.port=80'
+      - "traefik.frontend.redirect.entryPoint=http"
   proxy:
     image: traefik
     command: --api --docker
