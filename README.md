@@ -19,7 +19,7 @@ echo 'address=/.test/127.0.0.1' > /usr/local/etc/dnsmasq.conf
 sudo brew services start dnsmasq
 ```
 
-Check to make sure you have the directory `/etc/resolver`. If not, create it `sudo mkdir /etc/resolver`. Then you can add your `.test` resolver
+Check to make sure you have the directory `/etc/resolver`. If not, create it `sudo mkdir /etc/resolver`. Then you can add your `.test` resolver:
 
 ```
 sudo bash -c 'echo "nameserver 127.0.0.1" > /etc/resolver/test'
