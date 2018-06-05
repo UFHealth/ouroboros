@@ -7,6 +7,8 @@ A tool to make Docker-based development easier across multiple projects.
 
 Ouroboros provides a small proxy that will allow you to use multiple Docker projects at once. In addition, it provides both [MailCatcher](https://mailcatcher.me/) and [Webgrind](https://github.com/jokkedk/webgrind) to help troubleshoot email issues (and prevent erroneous emails from being sent to customers) as well as to help profile performance and other issues with your PHP applications.
 
+Think of it as a hub to allow you to develop in multiple projects on your machine at the same time (something that isn't really possible with Docker alone).
+
 ## Setting up DNS on Mac
 
 For Mac we can use the `.test` top-level domain via [dnsmasq](http://www.thekelleys.org.uk/dnsmasq/doc.html) and [resolver](https://developer.apple.com/legacy/library/documentation/Darwin/Reference/ManPages/man5/resolver.5.html).
