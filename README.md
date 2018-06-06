@@ -45,3 +45,8 @@ To access Webgrind simply point your browser to [http://webgrind.test]
 ## Access the Traefik dashboard
 
 Traefik offers a great dashboard to help you visualize your sites. You can access it at [http://traefik.test:8080/dashboard/]
+
+# Changelog
+
+##### 1.0
+* Initial Release
