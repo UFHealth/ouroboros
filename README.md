@@ -5,7 +5,7 @@ A tool to make Docker-based development easier across multiple projects.
 
 # Features
 
-Ouroboros provides a small proxy that will allow you to use multiple Docker projects at once. In addition, it provides both [MailCatcher](https://mailcatcher.me/) and [Webgrind](https://github.com/jokkedk/webgrind) to help troubleshoot email issues (and prevent erroneous emails from being sent to customers) as well as to help profile performance and other issues with your PHP applications.
+Ouroboros provides a small proxy that will allow you to use multiple Docker projects at once. In addition, it provides both [MailCatcher](https://mailcatcher.me/) and [Webgrind](https://github.com/jokkedk/webgrind) to help troubleshoot email issues (and prevent erroneous emails from being sent to customers) as well as to help profile performance and other issues with your PHP applications. Finally, it also contains [Search-replace DB](https://github.com/interconnectit/Search-Replace-DB) to make working with databases even easier.
 
 Think of it as a hub to allow you to develop in multiple projects on your machine at the same time (something that isn't really possible with Docker alone).
 
@@ -42,11 +42,18 @@ To access MailCatcher simply point your browser to [http://mailcatcher.test]
 
 To access Webgrind simply point your browser to [http://webgrind.test]
 
+## Accessing Search-Replace DB
+
+To access Search-replace DB simply point your browser to [http://srdb.test]. Note you will need to make the database you want to work on accessible to the outside network before this will work.
+
 ## Access the Traefik dashboard
 
 Traefik offers a great dashboard to help you visualize your sites. You can access it at [http://traefik.test:8080/dashboard/]
 
 # Changelog
+
+##### 1.1
+* Add search-replce db
 
 ##### 1.0
 * Initial Release

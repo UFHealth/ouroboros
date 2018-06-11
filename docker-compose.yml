@@ -5,6 +5,18 @@ networks:
     driver: bridge
 
 services:
+  srdb:
+    image: foxylion/search-replace-db
+    restart: always
+    depends_on:
+      - proxy
+    labels:
+      - 'traefik.frontend.rule=Host:srdb.test'
+      - 'traefik.domain=srdb.test'
+      - 'traefik.enable=true'
+      - 'traefik.docker.network=ouroboros_default'
+      - 'traefik.port=80'
+      - "traefik.frontend.redirect.entryPoint=http"
   mailcatcher:
     image: schickling/mailcatcher
     restart: always
